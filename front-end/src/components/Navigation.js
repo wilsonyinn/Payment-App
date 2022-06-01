@@ -8,7 +8,8 @@ const Navigation = () => {
       <Container>
         <Navbar.Brand href="/">Payment App</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
-        <Navbar.Collapse className="justify-content-end" id="basic-navbar-nav">
+        <Nav>
+        <Navbar.Collapse className="" id="basic-navbar-nav">
           <Nav.Link style={{ color: "white" }} href="/">
             Home
           </Nav.Link>
@@ -30,6 +31,7 @@ const Navigation = () => {
             <NavDropdown.Item href="/">Logout</NavDropdown.Item>
           </NavDropdown>
         </Navbar.Collapse>
+        </Nav>
       </Container>
     </Navbar>
   );
