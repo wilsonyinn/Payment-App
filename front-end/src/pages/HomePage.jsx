@@ -2,14 +2,14 @@ import React from 'react'
 import Home from '../components/Home'
 import Slider from '../components/Slider'
 import Navigation from '../components/Navigation'
-import Description from '../components/Description'
+import TeamCard from '../components/TeamCard'
 
 const HomePage = () => {
   return (
     <div>
       <Navigation />
       <Slider />
-      <Description />
+      <TeamCard />
     </div>
   )
 }
