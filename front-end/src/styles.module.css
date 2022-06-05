@@ -12,14 +12,15 @@
   border-radius: 10px;
 }
 
-.teamSection{
+.teamCards {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
 }
 
-.teamTitle{
+.teamTitle {
   display: flex;
   justify-content: center;
   padding: 3rem;
 }
+

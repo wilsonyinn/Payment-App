@@ -10,18 +10,18 @@ const HomePage = () => {
     <div>
       <Navigation />
       <Slider />
-      <h2 className={styles.teamTitle}>Meet the Developers</h2>
       <div className={styles.teamSection}>
-        <TeamCard
-          name="Tolby Lam"
-          description="Computer Science Student"
-          img="../assets/tolby-lam.jpeg"
-        />
-        <TeamCard
-          name="Wilson Yin"
-          description="Software Engineer"
-          img="../assets/wilson-yin.jpg"
-        />
+        <h1 className={styles.teamTitle}>Meet the Developers</h1>
+        <div className={styles.teamCards}>
+          <TeamCard
+            name="Tolby Lam"
+            img="../assets/tolby-lam.jpeg"
+          />
+          <TeamCard
+            name="Wilson Yin"
+            img="../assets/wilson-yin.jpg"
+          />
+        </div>
       </div>
     </div>
   );
