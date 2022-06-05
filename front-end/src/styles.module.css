@@ -24,3 +24,12 @@
   padding: 3rem;
 }
 
+.cardLink{
+  text-decoration: none;
+  color: black;
+}
+
+.cardLink:hover{
+  text-decoration: underline;
+  color: black;
+}

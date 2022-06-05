@@ -1,6 +1,7 @@
 import React from "react";
 import Card from "react-bootstrap/Card";
 import Button from "react-bootstrap/Button";
+import styles from "../styles.module.css";
 
 const socialLink = () => {
   console.log("poggers");
@@ -8,7 +9,7 @@ const socialLink = () => {
 
 const TeamCard = ({ name, link, img }) => {
   return (
-    <a href={link}>
+    <a href={link} className={styles.cardLink}>
       <Card style={{ width: "18rem" }}>
         <Card.Img
           variant="top"
