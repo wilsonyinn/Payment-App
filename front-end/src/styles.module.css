@@ -13,5 +13,13 @@
 }
 
 .teamSection{
-  
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.teamTitle{
+  display: flex;
+  justify-content: center;
+  padding: 3rem;
 }
