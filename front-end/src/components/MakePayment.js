@@ -65,6 +65,11 @@ const MakePayment = () => {
           <Form.Control type="number" placeholder="Amount" />
         </Form.Group>
         
+        <Form.Group className="mb-3" style={{ width: "400px" }} controlId="formBasicAmount">
+          <Form.Label>Note</Form.Label>
+          <Form.Control type="text" placeholder="Note" />
+        </Form.Group>
+
         <Form.Group className="mb-3" style={{ width: "400px" }} controlId="formBasicCheckbox">
           <Form.Check type="checkbox" label="I agree to the Terms & Services" />
         </Form.Group>

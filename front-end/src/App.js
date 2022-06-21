@@ -11,6 +11,7 @@ import LoginPage from "./pages/LoginPage";
 import RegistrationPage from "./pages/RegistrationPage";
 import HomePage from "./pages/HomePage";
 import MakePaymentPage from "./pages/MakePaymentPage";
+import ViewFeedPage from "./pages/ViewFeedPage";
 
 function App() {
 
@@ -22,6 +23,7 @@ function App() {
         <Route exact path="/login" component={LoginPage}/>
         <Route exact path="/register" component={RegistrationPage} />
         <Route exact path="/makePayment" component={MakePaymentPage} />
+        <Route exact path="/viewFeed" component={ViewFeedPage} />
       </Switch>
     </Router>
   );

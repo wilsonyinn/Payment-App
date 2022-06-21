@@ -19,7 +19,7 @@ const Navigation = () => {
           <Nav.Link style={{ color: "white" }} href="makePayment">
             Make Payment
           </Nav.Link>
-          <Nav.Link style={{ color: "white" }} href="/">
+          <Nav.Link style={{ color: "white" }} href="viewFeed">
             View Feed
           </Nav.Link>
           <NavDropdown 
