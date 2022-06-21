@@ -21,7 +21,7 @@ public class SparkDemo {
 
     MongoClient mongoClient = new MongoClient("localhost", 27017);
     // get ref to database
-    MongoDatabase db = mongoClient.getDatabase("AKPDatabase");
+    MongoDatabase db = mongoClient.getDatabase("UsersDatabase");
     // get ref to collection
     MongoCollection<Document> usersCollection = db.getCollection("usersCollection");
     MongoCollection<Document> paymentsCollection = db.getCollection("paymentsCollection");
@@ -74,6 +74,7 @@ public class SparkDemo {
     });
 
     get("/getFeed", (req, res) -> {
+      System.out.println("getFeed route reached");
       List<PaymentDto> paymentDtos = new ArrayList<>();
       List<Document> allPayments = paymentsCollection.find().limit(100).into(new ArrayList<Document>());
       for (Document d : allPayments) {
@@ -81,6 +82,8 @@ public class SparkDemo {
         PaymentDto paymentDto = fromDocument(d);
         paymentDtos.add(paymentDto);
       }
+      System.out.println(gson.toJson(paymentDtos));
+
       //iterate thro paymentsList
       //return a list of payments in a Dto
       return gson.toJson(paymentDtos);
