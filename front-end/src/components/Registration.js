@@ -8,10 +8,11 @@ const Registration = () => {
   const [username, setUsername] = React.useState("");
   const [password, setPassword] = React.useState("");
   const [confPassword, setConfPassword] = React.useState("");
-  const [error, setError] = React.useState("");
+  const [errorMessage, setErrorMessage] = React.useState("");
   const [isRegistered, setIsRegistered] = React.useState(false);
 
   const handleSubmit = () => {
+    console.log("submit checkpoint #1")
     const body = {
       username: username,
       password: password,
@@ -24,15 +25,12 @@ const Registration = () => {
     fetch("/register", settings)
       .then((res) => res.json())
       .then((data) => {
-        setError(data.error);
-        if (error == null) {
+        console.log("submit checkpoint #2")
+        console.log(data.error)
+        setErrorMessage(data.error);
+        if (data.error == "none") {
           console.log("user made");
           setIsRegistered(true);
-
-          // } else if (data.error) {
-          //   setError(data.error); //show error
-          //   console.log(error)
-          // }
         }
       })
       .catch((e) => console.log(e));

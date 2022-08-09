@@ -22,9 +22,8 @@ const Login = () => {
       .then((res) => res.json())
       .then((data) => {
         setError(data.error);
-        if (error == null) {
+        if (data.error == null) {
           setIsLoggedIn(true);
-          console.log("Hiii");
         } else if (data.error) {
           console.log(error);
         }
