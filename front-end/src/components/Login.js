@@ -65,22 +65,8 @@ const Login = () => {
         <Form.Text className="text-muted">
           Don't have an account? <a href="register">Register Here!</a>
         </Form.Text>
+        <p className={styles.errorMessage}>{error}</p>
       </Form>
-      {error}
-      {/* <div>
-        Username
-        <input value={username} onChange={(e) => updateUsername(e)} />
-      </div>
-      <div>
-        Password
-        <input
-          type="password"
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
-        />
-      </div>
-      <button onClick={handleSubmit}>Submit</button>
-      {error} */}
     </div>
   );
 };

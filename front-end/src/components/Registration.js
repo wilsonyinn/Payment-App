@@ -12,7 +12,6 @@ const Registration = () => {
   const [isRegistered, setIsRegistered] = React.useState(false);
 
   const handleSubmit = () => {
-    console.log("submit checkpoint #1")
     const body = {
       username: username,
       password: password,
@@ -25,8 +24,6 @@ const Registration = () => {
     fetch("/register", settings)
       .then((res) => res.json())
       .then((data) => {
-        console.log("submit checkpoint #2")
-        console.log(data.error)
         setErrorMessage(data.error);
         if (data.error == "none") {
           console.log("user made");
@@ -91,6 +88,7 @@ const Registration = () => {
         </Form.Group>
 
         <Button onClick={handleSubmit}>Submit</Button>
+        <p className={styles.errorMessage}>{errorMessage}</p>
       </Form>
       {/* <div>
         Username
